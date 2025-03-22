@@ -1,0 +1,8 @@
+apps\appContas.class
+contas\ContaEspecial.class
+contas\Taxas.class
+apps\appContaEspecial.class
+contas\Conta.class
+contas\ContaPoupanca.class
+classes\Pessoa.class
+contas\ContaComum.class
