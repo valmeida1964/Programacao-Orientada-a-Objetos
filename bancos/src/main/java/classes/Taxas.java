@@ -1,4 +1,4 @@
-package contas;
+package classes;
 
 public interface Taxas {
     

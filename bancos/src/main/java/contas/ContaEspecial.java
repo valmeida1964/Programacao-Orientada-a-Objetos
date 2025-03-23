@@ -1,6 +1,7 @@
 package contas;
 
 
+import classes.Taxas;
 import classes.Pessoa;
 
 public final class ContaEspecial extends Conta implements Taxas{

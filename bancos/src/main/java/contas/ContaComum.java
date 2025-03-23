@@ -1,5 +1,6 @@
 package contas;
 
+import classes.Taxas;
 import classes.Pessoa;
 
 
