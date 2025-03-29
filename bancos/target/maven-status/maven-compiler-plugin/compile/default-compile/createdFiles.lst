@@ -6,6 +6,7 @@ apps\appContaEspecial.class
 contas\Conta.class
 contas\ContaPoupanca.class
 classes\Taxas.class
+apps\appTesteConta1.class
 classes\Pessoa.class
 classes\Transacao.class
 contas\ContaComum.class
