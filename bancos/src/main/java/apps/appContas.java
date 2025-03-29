@@ -20,6 +20,9 @@ public class appContas {
             System.out.println("Saque realizado com sucesso");
         else
             System.out.println("Impossivel realizar saque");
+        
+        System.out.println("Nome do correntista: " + c1.getCorrentista());
+        
     }
     
 }
