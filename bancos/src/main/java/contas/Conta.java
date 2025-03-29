@@ -2,6 +2,12 @@ package contas;
 
 import classes.Pessoa;
 
+/**
+ * A classe <b>Conta</b> define um tipo abstrato ´para a criação da estrutura de classes de contas bancarias
+ * @author Vagner de Lima Almeida
+ * @since Março 2025
+ * @version 1.0
+ */
 public abstract class Conta {
     
     protected int numero;
