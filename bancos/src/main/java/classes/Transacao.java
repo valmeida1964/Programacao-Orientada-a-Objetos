@@ -20,4 +20,11 @@ public class Transacao {
         this.movimentos.add(movimento);
         return true;
     }
+    public void estornaTransacao(){
+        for(Movimento movimento: this.movimentos)
+            movimento = null;
+    }
+    public List<Movimento> getMovimentos(){
+        return this.movimentos;
+    }
 }

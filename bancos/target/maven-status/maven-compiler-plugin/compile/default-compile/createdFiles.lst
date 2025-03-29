@@ -1,8 +1,11 @@
 apps\appContas.class
+classes\Movimento.class
 contas\ContaEspecial.class
-contas\Taxas.class
+apps\appTransacoes.class
 apps\appContaEspecial.class
 contas\Conta.class
 contas\ContaPoupanca.class
+classes\Taxas.class
 classes\Pessoa.class
+classes\Transacao.class
 contas\ContaComum.class
