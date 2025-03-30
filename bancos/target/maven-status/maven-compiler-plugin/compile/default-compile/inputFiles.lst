@@ -1,12 +1,10 @@
-C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\apps\appContaEspecial.java
 C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\contas\ContaPoupanca.java
 C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\contas\ContaEspecial.java
-C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\apps\appContas.java
 C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\classes\Pessoa.java
 C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\classes\Taxas.java
-C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\apps\appTransacoes.java
 C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\classes\Movimento.java
 C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\contas\ContaComum.java
 C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\classes\Transacao.java
 C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\apps\appTesteConta1.java
 C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\contas\Conta.java
+C:\Users\vagner\Documents\NetBeansProjects\bancos\src\main\java\excecoes\SaldoInsuficienteException.java

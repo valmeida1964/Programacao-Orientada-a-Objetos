@@ -1,6 +1,7 @@
 package contas;
 
 import classes.Pessoa;
+import excecoes.SaldoInsuficienteException;
 
 /**
  * A classe <b>Conta</b> define um tipo abstrato ´para a criação da estrutura de classes de contas bancarias
@@ -62,19 +63,18 @@ public abstract class Conta {
         this.setSaldo(this.getSaldo() + valor);
     }
     
-    public abstract boolean sacar(float valor);
+    public abstract void sacar(float valor) throws SaldoInsuficienteException;
     
     private static void incrementaContas(){
         ++numero_contas;
     }
     
-    public boolean movimentar(float valor, int operacao){
-        boolean retorno = true;
+    public void movimentar(float valor, int operacao) throws SaldoInsuficienteException{
+  
         switch(operacao){
             case DEPOSITAR -> this.depositar(valor);
-            case SACAR -> retorno = this.sacar(valor);
-            default -> retorno = false;                
+            case SACAR -> this.sacar(valor);
         }
-        return retorno;
+       
     }
 }

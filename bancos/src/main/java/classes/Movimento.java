@@ -1,6 +1,7 @@
 package classes;
 
 import contas.Conta;
+import excecoes.SaldoInsuficienteException;
 import java.util.Date;
 
 public class Movimento {
@@ -68,10 +69,10 @@ public class Movimento {
         this.operacao = operacao;
     }
     
-    public boolean movimentar(){
+    public boolean movimentar() throws SaldoInsuficienteException{
         this.saldoanterior = conta.getSaldo();
         if(operacao == conta.SACAR)
-            return this.conta.movimentar(this.valor, Conta.SACAR);
+            this.conta.movimentar(this.valor, Conta.SACAR);
         else
             if(operacao == Conta.DEPOSITAR){
                 this.conta.movimentar(this.valor, Conta.DEPOSITAR);

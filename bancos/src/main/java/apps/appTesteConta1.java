@@ -4,20 +4,21 @@ package apps;
 import classes.Pessoa;
 import contas.Conta;
 import contas.ContaComum;
+import excecoes.SaldoInsuficienteException;
 import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class appTesteConta1 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SaldoInsuficienteException {
 
         Scanner teclado = new Scanner(System.in);
         teclado.useLocale(Locale.FRENCH);
         
         int numero = 0;
         String nome, email;
-        float saldo = 0, valordeposito = 0;
+        float saldo = 0, valorsaque = 0;
         
         System.out.print("Numero da conta .....: ");
         try{
@@ -45,18 +46,17 @@ public class appTesteConta1 {
         
         Conta contacomum = new ContaComum(numero, new Pessoa(nome, email), saldo);
         
-        System.out.print("Valor do deposito ...: ");
+        System.out.print("Valor do saque ......: ");
+        valorsaque = teclado.nextFloat();
+
         try{
-            valordeposito = teclado.nextFloat();
+            contacomum.sacar(valorsaque);
         }
-        catch(InputMismatchException e){
-            System.out.println("Informe um valor monetario, valido, para o valor de deposito ex:1234,56");
-            System.exit(0);
+        catch(SaldoInsuficienteException e){
+            System.out.println("Falha na tentativa de saque: " + e);
         }
-        
-        contacomum.depositar(valordeposito);
-        
-        System.out.printf("Saldo atual .........: %.2f\n ", contacomum.getSaldo());
+
+        System.out.printf("Saldo atual .........: %.2f\n", contacomum.getSaldo());
     }
-    
+   
 }

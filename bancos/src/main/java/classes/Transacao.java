@@ -1,6 +1,7 @@
 package classes;
 
 import contas.Conta;
+import excecoes.SaldoInsuficienteException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -13,12 +14,10 @@ public class Transacao {
         movimentos = new ArrayList<>();
     }
     
-    public boolean realizarTransacao(Date data, Conta conta, float valor, String historico, int operacao){
+    public void realizarTransacao(Date data, Conta conta, float valor, String historico, int operacao) throws SaldoInsuficienteException{
         Movimento movimento = new Movimento(data, conta, historico, valor, operacao);
-        if(!movimento.movimentar())
-            return false;
+        movimento.movimentar();
         this.movimentos.add(movimento);
-        return true;
     }
     public void estornaTransacao(){
         for(Movimento movimento: this.movimentos)

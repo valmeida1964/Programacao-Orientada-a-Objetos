@@ -1,6 +1,7 @@
 package contas;
 
 import classes.Pessoa;
+import excecoes.SaldoInsuficienteException;
 
 public class ContaPoupanca extends Conta{
 
@@ -12,12 +13,12 @@ public class ContaPoupanca extends Conta{
     }
     
     @Override
-    public boolean sacar(float valor){
+    public void sacar(float valor) throws SaldoInsuficienteException{
         if(valor < this.getSaldo()){
             this.setSaldo(this.getSaldo() - valor);
-            return true;
+        }else{
+            throw new SaldoInsuficienteException(this.getSaldo(), valor);
         }
-        return false;
     }    
     
 }

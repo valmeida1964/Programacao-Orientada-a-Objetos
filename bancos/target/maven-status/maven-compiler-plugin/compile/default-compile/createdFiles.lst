@@ -1,8 +1,6 @@
-apps\appContas.class
 classes\Movimento.class
 contas\ContaEspecial.class
-apps\appTransacoes.class
-apps\appContaEspecial.class
+excecoes\SaldoInsuficienteException.class
 contas\Conta.class
 contas\ContaPoupanca.class
 classes\Taxas.class
